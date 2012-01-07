@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2><a href="{% url analyzer.views.index %}">statement list</a></h2>
+<h2>add statement.</h2>
+
+{{ form.non_field_errors }}
+<form enctype="multipart/form-data" action="{% url add_statement %}" method="post">
+  {% csrf_token %}
+  <table>
+    <tr>
+      <td>statement file(csv):</td>
+      <td>{{ form.statement_file }}</td>
+    </tr>
+    <tr>
+      <td>institution:</td>
+      <td>{{ form.institution }}</td>
+    </tr>
+    <tr>
+      <td>comments:</td>
+      <td>{{ form.comments }}</td>
+    </tr>
+  </table>
+  <p><input type="submit" value="Create 'er" /></p>
+</form>
+{% endblock %} 
+
+

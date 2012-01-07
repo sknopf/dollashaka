@@ -19,5 +19,7 @@ urlpatterns += patterns('dollashaka',
     url(r'^logout/$', 'core.views.logout_user', name="logout"),
 )
 
-# fromfile
-## TODO: Add me later
+# Analyzer
+urlpatterns += patterns('dollashaka',
+    (r'^analyzer/', include('analyzer.urls')),                        
+)

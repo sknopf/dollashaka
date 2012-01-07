@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block assets_extended %}
+<script type="text/javascript" src="{{ MEDIA_URL }}js/d3/d3.min.js"></script>
+{% endblock %}
+
+
+{% block content %}
+<h2><a href="{% url add_statement %}">add new statement</a></h2>
+<h2>list statements</h2>
+<table>
+{% for statement in statements %}
+<tr>
+  <td>{{ statement.create_dt }}</td>
+  <td>{{ statement.comments }}</td>
+  <td>{{ statement.get_institution_display }}</td>
+  <td>{{ statement.purchase_set.all.count }}</td>
+  <td><a href="{% url delete_statement statement.id %}">delete</a></td>
+</tr>
+{% endfor %}
+</table>
+
+{% endblock %}
+
