@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>create a new $$$ account.</h2>
+{{ form.non_field_errors }}
+<form action="{%url create_account%}" method="post">
+  {% csrf_token %}
+  <table>
+    <tr>
+      {{ form.username.errors }}
+      <td>username: </td>
+      <td>{{ form.username }}</td>
+    </tr>
+    <tr>
+      {{ form.password.errors }}
+      <td>password: </td>
+      <td>{{ form.password }}</td>
+    </tr>
+    <tr>
+      {{ form.reenter_password.errors }}
+      <td>re-enter password: </td>
+      <td>{{ form.reenter_password }}</td>
+    </tr>
+    <tr>
+      {{ form.email.errors }}
+      <td>email: </td>
+      <td>{{ form.email }}</td>
+    </tr>
+  </table>
+  <p><input type="submit" value="Create 'er" /></p>  
+</form>
+{% endblock %}
+    

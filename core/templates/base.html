@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <head>
+        <title>{% block title %} $$$SHAKKA {% endblock %}</title>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	{% block assets %}
+	<link rel="stylesheet" href="{{ MEDIA_URL }}css/base.css" type="text/css" charset="utf-8">
+	<link rel="stylesheet" href="{{ MEDIA_URL }}css/jquery-ui/jquery-ui-1.8.16.custom.css" type="text/css" charset="utf-8">
+	<script type="text/javascript" src="{{ MEDIA_URL }}js/jquery-ui-1.8.16.custom.min.js"></script>
+	<script type="text/javascript" src="{{ MEDIA_URL }}js/jquery-1.6.2.min.js"></script>
+	{% endblock %}
+	
+	{% block assets_extended %}
+	{% endblock %}
+    </head>
+    <body>
+      <div id="header">
+        <div class="wrapper">
+          <div class="banner">
+            <a href="/" style="text-decoration:none"><h1 class="title">$$$SHAKKA</h1></a>
+          </div>
+          <div class="nav">
+            <div class="account_n_stuff">
+              <ul>
+                <li class="account">
+                  {% if user.is_authenticated %}
+                  <span>Logged in as:</span>
+                  <span class="username">{{ user.username }}</span>
+                  &nbsp;
+                  (
+                  <span><a href="/admin/password_change">Account settings</a>,</span>
+                  <span><a href="{% url logout %}">Logout</a></span>
+                  )
+                  {% else %}
+                  Not logged in.&nbsp;
+                  <span><a href="/">Login</a></span>
+                  {% endif %}
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div id="content_wrapper">
+        {% block content %}
+        {% endblock %}
+      </div>
+      <div id="footer" style="margin:0px;">
+	<hr>
+	$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+	<hr>
+      </div>
+    </body>
+</html>

@@ -1,0 +1,120 @@
+/* Login */
+#login {
+  -moz-border-radius: 15px;
+  -webkit-border-radius: 15px;
+  border-radius: 15px;
+  background-color: white;
+  border: 1px #cccccc solid;
+  padding: 22px;
+  background: url("../images/45-percent-opacity-white.png");
+  position: absolute;
+  left: 175px;
+  z-index: 10;
+}
+#login div.submit { margin-top: 10px; }
+#login td { padding: 4px; }
+#login_success {
+  position: absolute;
+  top: 130px;
+  left: 185px;
+  color: #4CFF57;
+  text-shadow: -10px -10px -10px hotpink;
+  font-family: Helvetica, Arial, sans-serif;
+  z-index: 10;
+}
+
+/* Header and stuff */
+.divider_background { background: url("../images/cssnav-div.gif") no-repeat scroll right center transparent; }
+.content_pane {
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 6px;
+}
+.content_pane h2.title { margin: 5px 0px; }
+
+#header {
+  background-color: #007F07;
+  border-bottom: 1px #267F2B solid;
+  height: 100px;
+  width: 100%;
+  margin-top: 2px;
+  margin-bottom: 20px;
+}
+#header .wrapper {
+  margin: 0 auto;
+  clear: both;
+}
+#header .banner {
+  width: 275px;
+  float: left;
+}
+#header .banner .title {
+  margin-top: 14px;
+  margin-left: 5px;
+  margin-bottom: 10px;
+  font-size: 4em;
+  color: #00FF0F;
+  text-shadow: hotpink 10px 10px 10px;
+}
+#header .nav { float: right; }
+#header .nav .account_n_stuff {
+  margin-top: 10px;
+  font-size: 0.72em;
+}
+#header .nav .account_n_stuff ul {
+  text-align: right;
+  margin: 0px;
+}
+#header .nav .account_n_stuff li {
+  font-family: 'Trebuchet MS', Gill Sans, Gill Sans MT, Helvetica, sans-serif;
+  display: inline;
+}
+#header .nav .account_n_stuff li.account { margin: 0 10px; }
+#header .nav .account_n_stuff li.account span.username {
+  font-weight: bold;
+  font-style: italic;
+}
+#header .nav .account_n_stuff li.account a { color: #FFEA4D; }
+
+/*Leaving this nav stuff in for now
+  in case we add a navbar later
+*/
+
+#header .nav .nav_tabs {
+  bottom: 4px;
+  margin-right: 12px;
+  margin-top: 25px;
+  position: relative;
+}
+#header .nav .nav_tabs li {
+  display: inline;
+  position: relative;
+  font-size: 0.91em;
+  color: #aab4bb;
+}
+#header .nav .nav_tabs li.link {
+  padding: 5px 10px;
+  z-index: 1001;
+}
+#header .nav .nav_tabs li.link a {
+  font-family: 'Trebuchet MS', Gill Sans, Gill Sans MT, Helvetica, sans-serif;
+  font-weight: bold;
+  text-decoration: none;
+  color: #FF0064;
+}
+
+#header .nav .nav_tabs > ul > li.link:hover {
+    background-image: url("../images/45-percent-opacity-white.png");
+    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, .1);
+    -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, .1);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .1);
+}
+
+/*Footer*/
+#footer  {
+    color: #007F07;
+    text-align: center;
+    font-size: 2em;
+}

@@ -1,0 +1,15 @@
+*~
+*.orig
+*.pyc
+*.swp
+*.swo
+\#*
+\.#*
+media_main/uploads/
+DSH.db
+pip-log.txt
+.project
+.pydevproject
+.idea
+.settings*
+log/

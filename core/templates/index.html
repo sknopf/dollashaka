@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div style="height:474px;">
+    {% if not user.is_authenticated %}
+    <div id="login">
+        <form id="login_form" method="post" action="{% url login %}">
+            {% csrf_token %}
+            {{ form.redirect_url }}
+            {% if login_error %}
+            <div class="ui-widget">
+                <div style="padding: 0pt 0.7em;" class="ui-state-error ui-corner-all"> 
+                    <p><span style="float: left; margin-right: 0.3em;" class="ui-icon ui-icon-alert"></span> 
+                    {{ login_error }}
+                </div>
+            </div>
+            {% endif %}
+            <table>
+                <tbody>
+		    <tr>
+		        <td colspan="2"><a href={% url create_account %}>create account</a></td>
+	            </tr>
+                    <tr>
+                        <td><label for="id_username">Username:</label></td>
+                        <td><input type="text" id="id_username" name="username"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="id_password">Password:</label></td>
+                        <td><input type="password" id="id_password" name="password"></td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="submit">
+                <label>&nbsp;</label><input type="submit" id="login_form_submit" value="Log in" class="ui-button ui-widget ui-state-default ui-corner-all" role="button" aria-disabled="false">
+            </div>
+        </form>
+    </div>
+    {% endif %}
+    {% if login_succeeded %}
+    <div id="login_success">
+        <h1>Welcome to $$$SHAKKA!</h1>
+    </div>
+    {% endif %}
+</div>
+{% endblock %}
