@@ -1,6 +1,6 @@
 # Django settings for dollashaka project.
 
-PROJECT_HOME = '/home/seth/Projects/dollashaka/'
+from local_settings import PROJECT_HOME
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG

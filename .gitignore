@@ -13,3 +13,4 @@ pip-log.txt
 .idea
 .settings*
 log/
+local_settings.py
